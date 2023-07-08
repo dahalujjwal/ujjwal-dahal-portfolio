@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+            background-color: #212329;
+            color:white;
+        }
+
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 50px;
+            
+        }
+
+        .input-box1,.input-box2,#email-box,#phone-box{
+            height:50px;
+            width:250px;
+            margin-bottom: 20px;
+            border:2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+      
+        .input-box1,.input-box2,#email-box,#phone-box::placeholder{
+            text-align: center;
+            color: rgba(226, 233, 240, 0.474);
+        }
+
+        #submit-btn{
+            height:40px;
+            width:80px;
+            border:2px solid transparent;
+            background-color: rgb(85, 85, 234);
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top:30px;
+        }
+
+        #submit-btn:hover{
+            background-color: rgb(236, 63, 63);
+            transition:all 0.2s ease-out;
+        }
+        #input-box1:hover{
+            border:2px solid rgb(85, 85, 234);
+            transition:all 0.1s ease-out;
+            
+        }
+        #input-box2:hover{
+            border:2px solid rgb(85, 85, 234);
+            transition:all 0.1s ease-out;
+            
+        }
+        #email-box:hover{
+            border:2px solid rgb(85, 85, 234);
+            transition:all 0.1s ease-out;
+            
+        }
+        #phone-box:hover{
+            border:2px solid rgb(85, 85, 234);
+            transition:all 0.1s ease-out;
+            
+        }
+        h1{
+            cursor: pointer;
+        }
+        h1:hover{
+            color:rgb(236, 63, 63);
+            transition: all 0.2s ease-out;
+        }
+
+        .script{
+           color:rgb(236, 63, 63);
+        }
+
+
+        #return{
+            text-decoration: none;
+            margin-top:70px;
+            color:rgb(236, 63, 63);
+            
+        }
+
+        #return:hover{
+            color:rgb(85, 85, 234);
+            transition:all 0.2s ease-out;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h1>FORM</h1>
+            <input type="text"  placeholder="Enter First Name" class="input-box1" id="input-box1">
+            <input type="text"  placeholder="Enter Last Name" class="input-box2" id="input-box2">
+            <input type="email"  placeholder="Email" id="email-box">
+            <input type="number"  placeholder="Phone Number" id="phone-box">
+            <input type="button" onclick="display()" value="Submit" id="submit-btn">
+            <a href="index.html" id="return">Return To Home Page</a>
+        </form>
+    </div>
+    <div id="for-js"></div>
+
+    <div class="java-script">
+
+        <script class="script">
+            function display()
+            {
+            var fname=document.getElementById("input-box1").value;
+            var lname=document.getElementById("input-box2").value;
+            var email=document.getElementById("email-box").value;
+            var number=document.getElementById("phone-box").value;
+    
+            if(fname=="" || lname=="" || email=="" || number=="")
+            {
+                alert("Don't Leave Blank !!");
+            }
+            else{
+                document.getElementById("for-js").innerHTML = ` First Name : ${fname} <br> Last Name : ${lname} <br> Email: ${email} <br> Phone Number : ${number}`
+    
+            }
+    
+            }
+          
+    
+        </script>
+
+    </div>
+   
+</body>
+</html>
